@@ -2,6 +2,7 @@
 # Example: C3H8 + O2 -> CO2 + H2O
 
 
+# This function gives off the dictionary takes no input
 def parse_reaction():
     # For now, hardcode a reaction (later you can make it user input)
     reaction = {
@@ -10,6 +11,8 @@ def parse_reaction():
     }
     return reaction
 
+#This function takes a dictionary as a function 
+
 def limiting_reactant(reaction):
     ratios = {}
     for reactant, available in reaction["reactants"].items():
@@ -17,7 +20,7 @@ def limiting_reactant(reaction):
         ratios[reactant] = available / needed
     return min(ratios, key=ratios.get)  # reactant with smallest ratio
 
-def calculate_products(reaction):
+'''def calculate_products(reaction):
     lr = limiting_reactant(reaction)
     factor = reaction["reactants"][lr] / reaction["stoichiometry"][lr]
     products = {}
@@ -28,4 +31,4 @@ def calculate_products(reaction):
 
 reaction = parse_reaction()
 print("Limiting reactant:", limiting_reactant(reaction))
-print("Products formed:", calculate_products(reaction))
+print("Products formed:", calculate_products(reaction))'''

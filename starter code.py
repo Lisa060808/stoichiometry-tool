@@ -82,10 +82,3 @@ for species, moles_left in remaing_moles.items():
 # Print what is formed 
 for species, moles_formed in product_moles.items():
     print(f'{moles_formed} moles of {species} formed')
-
-
-
-
-
-
-
